@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+	    <title>Bingo</title>
+		<link rel="stylesheet" type="text/css" href="bingo.css">
+	    <script type="text/javascript" src="bingo.js" async></script>
+	</head>
+	<body>
+		<div id="options">
+			<p id="message" class="borderO" onclick="playerGoal();">Welcome Player! Choose a goal below.</p>
+			<div id="goal" class="borderO">
+				<p><b>Player Goal</b></p>
+			    <p><input type="radio" name = "goal" id="row">Row Bingo</p>
+	      		<p><input type="radio" name = "goal" id="col">Column Bingo</p>
+				<p><input type="radio" name = "goal" id="diag">Diagonal Bingo</p>
+				<p><input type="radio" name = "goal" id="x">'X' Bingo</p>
+				<p><input type="radio" name = "goal" id="fourC">'Four Corners' Bingo</p>
+				<p><input type="radio" name = "goal" id="full">'Full' Bingo</p>
+				<!--<button onclick="playerGoal();">Goal</button>-->
+			</div>
+			<div id="caller" class="borderO">
+				<p id="displayDraw"></p>
+				<p><button id="cBtn" onclick="drawNum();">Draw Number</button></p>
+			</div>
+			<!--<div id="callNums" class="borderO"><ul id="called"><li>d</li><li>o</li></ul></div>-->
+			<p><button id="bBtn" onclick="check();">BINGO!</button></p>
+		</div>
+		
+		<table id="bingo" class="borderB">
+		   <tr>
+		      <th>B</th>
+		      <th>I</th>
+		      <th>N</th>
+		      <th>G</th>
+		      <th>O</th>
+		   </tr>
+		   <!--Row 1-->
+		   <tr class="border">
+		      <td id="randB1" onclick="marker('randB1');"></td>
+		      <td id="randI1" onclick="marker('randI1');"></td>
+		      <td id="randN1" onclick="marker('randN1');"></td>
+		      <td id="randG1" onclick="marker('randG1');"></td>
+		      <td id="randO1" onclick="marker('randO1');"></td>
+		   </tr>
+		   <!--Row 2-->
+		   <tr class="border">
+		      <td id="randB2" onclick="marker('randB2');"></td>
+		      <td id="randI2" onclick="marker('randI2');"></td>
+		      <td id="randN2" onclick="marker('randN2');"></td>
+		      <td id="randG2" onclick="marker('randG2');"></td>
+		      <td id="randO2" onclick="marker('randO2');"></td>
+		   </tr>
+		   <!--Row 3-->
+		   <tr class="border">
+		      <td id="randB3" onclick="marker('randB3');"></td>
+		      <td id="randI3" onclick="marker('randI3');"></td>
+		      <td id="free" onclick="marker('free');">FREE</td>
+		      <td id="randG3" onclick="marker('randG3');"></td>
+		      <td id="randO3" onclick="marker('randO3');"></td>
+		   </tr>
+		   <!--Row 4-->
+		   <tr class="border">
+		      <td id="randB4" onclick="marker('randB4');"></td>
+		      <td id="randI4" onclick="marker('randI4');"></td>
+		      <td id="randN4" onclick="marker('randN4');"></td>
+		      <td id="randG4" onclick="marker('randG4');"></td>
+		      <td id="randO4" onclick="marker('randO4');"></td>
+		   </tr>
+		   <!--Row 5-->
+		   <tr class="border">
+		      <td id="randB5" onclick="marker('randB5');"></td>
+		      <td id="randI5" onclick="marker('randI5');"></td>
+		      <td id="randN5" onclick="marker('randN5');"></td>
+		      <td id="randG5" onclick="marker('randG5');"></td>
+		      <td id="randO5" onclick="marker('randO5');"></td>
+		   </tr>
+		</table>
+	</body>
+</html>
